@@ -38,7 +38,7 @@
                             <td><?= $pr['ProductPrice'] ?></td>
                             <td>
                                 <a href="<?= base_url('product/edit/'.$pr['id'])?>" class = "btn btn-primary btn-sm">Edit</a>
-                                <a href="" class = "btn btn-danger btn-sm">Delete</a>
+                                <a href="<?= base_url('product/delete/'.$pr['id']) ?>" class = "btn btn-danger btn-sm">Delete</a>
                             </td>
                         </tr>
                         <?php endforeach; ?>

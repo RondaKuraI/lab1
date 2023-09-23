@@ -49,4 +49,9 @@ class ProductController extends BaseController
         $this->product->update($id, $data);
         return redirect()->to(base_url('product'))->with('status', 'Product Updated Successfully!');
     }
+
+    public function deleteProduct($id){
+        $this->product->delete($id);
+        return redirect()->to(base_url('product'))->with('status', 'Product Deleted Successfully!');
+    }
 }
