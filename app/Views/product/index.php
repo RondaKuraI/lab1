@@ -15,7 +15,7 @@
                     </h>
                 </div>
                 <div class="card-body">
-                    <table class="table table-dark table-striped">
+                    <table class="table table-dark table-striped table-bordered">
                         <thead>
                         <tr>
                             <th>ID</th>
@@ -37,7 +37,7 @@
                             <td><?= $pr['ProductQuantity'] ?></td>
                             <td><?= $pr['ProductPrice'] ?></td>
                             <td>
-                                <a href="" class = "btn btn-primary btn-sm">Edit</a>
+                                <a href="<?= base_url('product/edit/'.$pr['id'])?>" class = "btn btn-primary btn-sm">Edit</a>
                                 <a href="" class = "btn btn-danger btn-sm">Delete</a>
                             </td>
                         </tr>
