@@ -8,14 +8,14 @@
                     echo "<h4>".session()->getFlashdata('status')."</h4>";
                 }
             ?>
-            <div class="card p-3">
+            <div class="card">
                 <div class="card-header">
                     <h4>Product Listing
                         <a href="<?= base_url('product-add') ?>" class = "btn btn-dark float-end">Add Product</a>
                     </h>
                 </div>
                 <div class="card-body">
-                    <table class="table table-dark table-striped table-bordered">
+                    <table class="table table-striped table-bordered">
                         <thead>
                         <tr>
                             <th>ID</th>
