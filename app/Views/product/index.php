@@ -15,7 +15,7 @@
                     </h>
                 </div>
                 <div class="card-body">
-                    <p>eefwef</p>
+                    <p><a href="<?= base_url('dropdown') ?>" class = "btn btn-dark">Prouct Categories</a></p>
                     <table class="table table-striped table-bordered">
                         <thead>
                         <tr>
