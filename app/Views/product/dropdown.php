@@ -1,19 +1,10 @@
 <?= $this->include('layouts/bootstrap')?>
 
 <?php
-    $con = mysqli_connect("localhost", "root", "dbprod");
-    $s = mysqli_query($con, "SELECT * from table_category");
+    $con = mysqli_connect("localhost", "root", "", "dbprod");
+    $s = mysqli_query($con, "SELECT DISTINCT ProductCategory from dbprod.table_products");
 ?>
-<select>
-<?php
-    while($r = mysqli_fetch_array($s)){
-        ?>
-        <option <?php echo $r['ProductCategory'] ?></option>
-        <option </option>
-<?php
-    }
-?>
-</select>
+
     
 
 
@@ -28,7 +19,15 @@
                     </h>
                 </div>
                 <div class="card-body">
-                
+                <select>
+                    <?php
+                        while($r = mysqli_fetch_array($s)){
+                            ?>
+                            <option><?php echo $r['ProductCategory'] ?></option>
+                    <?php
+                        }
+                    ?>
+                </select>
                 </div>
             </div>
         </div>
