@@ -54,4 +54,9 @@ class ProductController extends BaseController
         $this->product->delete($id);
         return redirect()->to(base_url('product'))->with('status', 'Product Deleted Successfully!');
     }
+
+    //Hakdog lng
+    public function dropdown(){
+        return view('product/dropdown');
+    }
 }
