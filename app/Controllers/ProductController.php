@@ -59,4 +59,8 @@ class ProductController extends BaseController
     public function dropdown(){
         return view('product/dropdown');
     }
+
+    public function list(){
+        return view('product/list');
+    }
 }

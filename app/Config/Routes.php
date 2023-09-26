@@ -13,4 +13,5 @@ $routes->get('/product/edit/(:any)', 'ProductController::editProduct/$1');
 $routes->post('/product/update/(:any)', 'ProductController::updateProduct/$1');
 $routes->get('/product/delete/(:any)', 'ProductController::deleteProduct/$1');
 $routes->get('/dropdown', 'ProductController::dropdown');
+$routes->get('/list', 'ProductController::list');
 
