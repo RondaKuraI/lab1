@@ -7,8 +7,11 @@ use App\Controllers\BaseController;
 class ProductController extends BaseController
 {
     private $product;
+    private $tablecategory
+    ;
     public function __construct(){
         $this->product = new \App\Models\ProductModel();
+        $this->tablecategory = new \App\Models\TableCategoryModel();
     }
 
     public function index()
@@ -31,6 +34,16 @@ class ProductController extends BaseController
         ];
         $this->product->save($data);
         return redirect()->to(base_url('product'))->with('status', 'Product Added Successfully!');
+
+        // Save data to the TableCategoryModel as well
+        $sectionData = 
+        [
+            'ProductCategory' => $this->request->getVar('ProductCategory'),
+        ];
+
+        $this->tablecategory->save($sectionData);
+
+        return redirect()->to(base_url('product'));
     }
     
     public function editProduct($id){
